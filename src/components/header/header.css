@@ -1,0 +1,10 @@
+.ant-menu.ant-menu-dark .ant-menu-item-selected,
+.ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+    background-color: transparent !important;
+    color: #1890ff;
+}
+
+.ant-menu-dark .ant-menu-item-selected>a,
+.ant-menu-dark .ant-menu-item-selected>a:hover {
+    color: #1890ff !important;
+}

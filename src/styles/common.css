@@ -1,0 +1,9 @@
+.ant-menu a:hover {
+    text-decoration: normal;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

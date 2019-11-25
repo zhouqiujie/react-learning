@@ -9,13 +9,18 @@ import Root from './router/Routes';
 
 import 'antd/dist/antd.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/common.css';
+
+import { authContext } from 'auth/adalConfig'
+
+authContext.handleWindowCallback()
 
 ReactDOM.render(
     <BrowserRouter>
-        <Root/>
+        <Root />
     </BrowserRouter>,
     document.getElementById('root')
-    );
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
