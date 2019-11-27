@@ -11,7 +11,7 @@ import { authContext, adalConfig } from 'auth/adalConfig';
 const { Header } = Layout;
 
 const mapStateToProps = state => {
-    console.log(state)
+    // console.log(state)
     return { userProps: state.user }
 };
 
@@ -44,10 +44,11 @@ export class HeaderComponent extends Component {
 
 
     componentDidMount() {
+
         // authContext.handleWindowCallback();
         console.log(this.props)
-        console.log(authContext.getCachedUser())
-        console.log(authContext.getCachedToken(adalConfig.clientId))
+        // console.log(authContext.getCachedUser())
+        // console.log(authContext.getCachedToken(adalConfig.clientId))
 
     }
 

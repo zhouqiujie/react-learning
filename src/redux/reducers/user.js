@@ -1,17 +1,22 @@
-import { USER_LOGIN, USER_LOGOUT } from '../actions/user';
+import {
+    USER_LOGIN, USER_LOGOUT, UserRoleassignmentsFetched, EnrollFetched,
+    SubsFetched
+} from 'redux/actions/actionTypes';
 
 const initialState = {
     name: 'NULL',
     email: '',
-    id: '',
-    detail: '',
-    loggedIn: false
+    profile: '',
+    loggedIn: false,
+    roleAssignments: [],
+    enroll: {},
+    subs: []
 };
 
 const UserReducer = (state = initialState, action) => {
+    const res = action.payload;
     switch (action.type) {
         case USER_LOGIN: {
-            const res = action.payload;
             return {
                 ...state,
                 ...res
@@ -19,12 +24,33 @@ const UserReducer = (state = initialState, action) => {
         }
 
         case USER_LOGOUT: {
-            const res = action.payload;
             return {
                 ...state,
                 ...res
             }
         }
+
+        case UserRoleassignmentsFetched: {
+            return {
+                ...state,
+                roleAssignments: res
+            }
+        }
+
+        case EnrollFetched: {
+            return {
+                ...state,
+                enroll: res
+            }
+        }
+
+        case SubsFetched: {
+            return {
+                ...state,
+                subs: res
+            }
+        }
+
 
         default:
             return state;

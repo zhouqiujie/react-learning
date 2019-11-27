@@ -4,13 +4,13 @@ import {
 } from 'react-adal';
 
 export const adalConfig = {
-    instance: '000',
-    tenant: '00',
-    clientId: '000',
-   /*  endpoints: {
-        api: '',
-    }, */
-    cacheLocation: 'localStorage',    
+    instance: '***',
+    tenant: '***',
+    clientId: '***',
+    /*  endpoints: {
+         api: '',
+     }, */
+    cacheLocation: 'localStorage',
     redirectUri: 'http://localhost:3000',
     navigateToLoginRequestUrl: false
 };
