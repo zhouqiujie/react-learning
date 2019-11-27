@@ -8,8 +8,10 @@ react
 react-router-dom
 react-redux redux
 redux-saga
+axios
 ant-design
 bootstrap
+
 
 实现部分：
 使用ant-design搭建布局，使用react-router完成路由配置，并实现路由守卫。
