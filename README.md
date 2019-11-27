@@ -1,7 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-使用React学习开发一个PC端需要登录使用的平台，使用到的技术栈
+使用React学习开发一个PC端需要登录使用的平台。
 
+
+使用到的技术栈：
 react
 react-router-dom
 react-redux redux
