@@ -13,6 +13,7 @@ export const adalConfig = {
     cacheLocation: 'localStorage',
     redirectUri: 'http://localhost:3000',
     navigateToLoginRequestUrl: false
+
 };
 
 export const authContext = new AuthenticationContext(adalConfig);

@@ -16,7 +16,9 @@ class Intro extends Component {
                 <HeaderComponent></HeaderComponent>
                 <Content className="site-main">
                     首页
-                  <Switch>
+                    <div className="text-danger">NODE_ENV:{process.env.NODE_ENV}</div>
+                    <div className="text-danger">API_URL:{process.env.REACT_APP_API_URL}</div>
+                    <Switch>
                         <Route path="/intro/intro1" exact component={Intro1}></Route>
                         <Route path="/intro/intro2" exact component={Intro2}></Route>
                         <Route>

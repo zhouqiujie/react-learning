@@ -1,6 +1,7 @@
 import AxiosInstance from './axios-core';
+import API from './api';
 
-const API_URL = '';
+const API_URL = 'http://api:81/';
 const API_VERSION = '2018-09-01-preview'
 
 export const Login = (params) => {

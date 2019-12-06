@@ -8,12 +8,13 @@ import { BrowserRouter } from 'react-router-dom';
 import Root from './router/Routes';
 
 import 'antd/dist/antd.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/custom.scss';
 import './styles/common.css';
 
 import { authContext } from 'auth/adalConfig'
 
-authContext.handleWindowCallback()
+authContext.handleWindowCallback();
+
 
 ReactDOM.render(
     <BrowserRouter>

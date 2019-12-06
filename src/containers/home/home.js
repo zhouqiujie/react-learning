@@ -16,11 +16,14 @@ const mapStateToProps = state => ({
     userProps: state.user
 })
 
+
+
 class Home extends Component {
     constructor(props) {
         super(props);
         // console.log(this.props)
-        this.state = { userProps: props.userProps || {} }
+        this.state = { child: true }
+        console.log(process.env, process.env.REACT_APP_API_URL)
     }
     componentDidUpdate() {
         console.log(this.props)
@@ -39,6 +42,7 @@ class Home extends Component {
 
     click = () => {
         console.log(this.state)
+        alert(JSON.stringify(this.state, null, 2))
     }
 
     render() {
@@ -51,10 +55,12 @@ class Home extends Component {
                     </Sider>
 
                     <Content>
+                    <div className="text-danger">NODE_ENV:{process.env.NODE_ENV}</div>
+                    <div className="text-danger">API_URL:{process.env.REACT_APP_API_URL}</div>
                         {this.props.userProps.roleAssignments.map((e, i) => (
-                            <div key={i}>
+                            <span key={i}>
                                 <Button onClick={this.click}></Button>
-                            </div>
+                            </span>
 
                         )
                         )}
@@ -62,7 +68,7 @@ class Home extends Component {
                             <Route exact path={`/home/page1`} component={Page1} />
                             <Route exact path="/home/page2" component={Page2} />
                             <Route>
-                                <Page1 />
+                                <Page2 />
                             </Route>
                         </Switch>
 
